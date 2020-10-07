@@ -864,7 +864,7 @@ int fim_db_get_path_range(fdb_t *fim_sql,
 }
 
 char *fim_db_read_line_from_file(fim_tmp_file *file, int storage, int it) {
-    char *retval;
+    char *retval = NULL;
     char line[PATH_MAX + 1];
 
     if (it == file->elements) {

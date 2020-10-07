@@ -119,7 +119,7 @@ cJSON *fim_registry_value_json_event(const fim_entry *new_data,
                                      unsigned int type,
                                      __attribute__((unused)) whodata_evt *w_evt,
                                      const char *diff) {
-    cJSON *changed_attributes;
+    cJSON *changed_attributes = NULL;
     char path[OS_SIZE_512];
 
     if (old_data != NULL && old_data->registry_entry.value != NULL) {
